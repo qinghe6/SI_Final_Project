@@ -377,10 +377,12 @@ if __name__ == "__main__":
                                                   marker={'symbol': 'star', 'size': 30, 'color': 'magenta'})
                         basic_layout = go.Layout(title="A Scatter Plot")
                         fig = go.Figure(data=scatter_data, layout=basic_layout)
-                        fig.write_html("scatter.html", auto_open=True)
+                        fig.show()
                         a = 0
                     elif int(input4) == 4:
-                        plt.xticks(rotation=45, horizontalalignment='right', fontweight='light', fontsize='x-large')
-                        plt.plot(xvals, yvals)
+                        line_data = go.Scatter(x=xvals, y=yvals)
+                        basic_layout = go.Layout(title="A Line Plot")
+                        fig = go.Figure(data=line_data, layout=basic_layout)
+                        fig.show()
                         a = 0
-
+                        
