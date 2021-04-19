@@ -263,7 +263,7 @@ if __name__ == "__main__":
     rating = []
     categories = []
     phone = []
-    for i in range(40):
+    for i in range(100):
         dic = get_Yelp_Api(lat[i], lon[i])
         if 'businesses' in dic:
             for j in range(len(dic['businesses'])):
@@ -303,12 +303,21 @@ if __name__ == "__main__":
 
     list_C = ['Hoboken', 'Jersey City', 'Union City', 'Cleveland', 'Stuart', 'Woodbridge Township', 'Woodbridge',
               'Avenel', 'Iselin', 'Edison', 'Vista', 'Sparks', 'Green Bay', 'San Mateo', 'League City', 'Lewisville',
-              'Waterbury',
-              'West Palm Beach', 'Palm Beach', 'Antioch', 'High Point', 'Miami Gardens', 'Opa Locka', 'Miami Lakes',
-              'Murrieta',
-              'Springfield', 'El Monte', 'College Station', 'Boston', 'Allston', 'Brookline', 'Somerville', 'Cambridge',
-              'Richardson',
-              'Berkeley', 'Columbia', 'Athens', 'Garland']
+              'Waterbury', 'West Palm Beach', 'Palm Beach', 'Antioch', 'High Point', 'Miami Gardens', 'Opa Locka',
+              'Miami Lakes',
+              'Murrieta', 'Springfield', 'El Monte', 'College Station', 'Boston', 'Allston', 'Brookline', 'Somerville',
+              'Cambridge',
+              'Richardson', 'Berkeley', 'Columbia', 'Athens', 'Garland', 'Oakland', 'Surprise', 'Murfreesboro',
+              'Thornton', 'Pasadena',
+              'Altadena', 'Bridgeport', 'Fairfield', 'Paterson', 'Prospect Park', 'Crest Hill', 'Escondido',
+              'West Springfield', 'Corona',
+              'Pembroke Pines', 'Elk Grove', 'Oceanside', 'Newport News', 'Sioux Falls', 'Vancouver', 'Worcester',
+              'Tallahassee',
+              'Montgomery', 'Aurora', 'Amarillo', 'Modesto', 'Irvine', 'Arlington', 'Indianapolis', 'Columbus',
+              'Austin', 'Dallas', 'Redwood City',
+              'San Carlos', 'New Braunfels', 'Houston', 'Muncie', 'Palm Springs', 'Richmond', 'Tempe', 'Minneapolis',
+              'Bloomington',
+              'Diamond Bar', 'Peoria', 'Northglenn', 'Albany', 'Fairfield']
     a = 1
     while True:
         if a == 1:
@@ -320,7 +329,12 @@ if __name__ == "__main__":
                 "Miami Gardens, Opa Locka, Miami Lakes, "
                 "Murrieta, Springfield, El Monte, College Station, Boston, Allston, Brookline, "
                 "Somerville, Cambridge, Richardson, "
-                "Berkeley, Columbia, Athens, Garland or 'exit':")
+                "Berkeley, Columbia, Athens, Garland, Oakland, Surprise, Murfreesboro, Thornton, Pasadena, "
+                "Altadena, Bridgeport, Fairfield, Paterson, Prospect Park, Crest Hill, Escondido, West Springfield, "
+                "Corona, Pembroke Pines, Elk Grove, Oceanside, Newport News, Sioux Falls, Vancouver, Worcester, "
+                "Tallahassee, Montgomery, Aurora, Amarillo, Modesto, Irvine, Arlington, Indianapolis, Columbus, "
+                "Austin, Dallas, Redwood City, San Carlos, New Braunfels, Houston, Muncie, Palm Springs, Richmond, "
+                "Tempe, Minneapolis, Bloomington, Diamond Bar, Peoria, Northglenn, Albany, Fairfield or 'exit':")
             input2 = input1.lower()
             input3 = input2[0].upper() + input2[1:]
             if input2 == 'exit':
@@ -385,4 +399,3 @@ if __name__ == "__main__":
                         fig = go.Figure(data=line_data, layout=basic_layout)
                         fig.show()
                         a = 0
-                        
